@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Propuesta de Implementación Odoo – ATANOS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- PORTADA -->
+    <section class="portada">
+        <div class="portada-container">
+            <div class="logos-presentadores">
+                <img src="altix.png" alt="Logo Altix Corp" class="logo-altix">
+            </div>
+
+            <div class="portada-contenido">
+                <h1 class="titulo-cliente">ATANOS<br><span class="titulo-cliente-sec">&amp; MIMINAL</span></h1>
+                <h2 class="titulo-principal">Propuesta de Implementación<br>Odoo Enterprise</h2>
+                <h3 class="subtitulo-principal">Retail de Moda · Multi-Compañía · POS · e-Commerce · Dualidad VES/USD</h3>
+
+                <p class="portada-descripcion">
+                    Presentada por <strong>Altix Corp</strong>, con la colaboración de<br>
+                    <strong>Corporación Maximus 1999 C.A.</strong> como empresa intermediaria tecnológica<br>
+                    para la localización contable y de nómina venezolana.
+                </p>
+
+                <div class="portada-fecha">
+                    <p>Fecha: 13 / 09 / 2026</p>
+                </div>
+            </div>
+
+            <div class="barra-vino"></div>
+        </div>
+    </section>
+
+    <!-- CONTRAPORTADA / CONTEXTO -->
+    <section class="contraportada">
+        <div class="contenedor">
+            <div class="contraportada-grid">
+                <div class="contraportada-texto">
+                    <h2>Acerca de esta Propuesta</h2>
+                    <p>
+                        La presente propuesta técnica y comercial es presentada por <strong>Altix Corp</strong>
+                        (<em>Advanced Logic &amp; Technology Integration Experience</em>), firma especializada en
+                        implementaciones Odoo, en colaboración con <strong>Corporación Maximus 1999 C.A.</strong>,
+                        empresa venezolana con experiencia operativa real en Odoo y desarrolladora de soluciones
+                        de localización para Venezuela.
+                    </p>
+                    <p>
+                        El documento detalla la solución integral para <strong>ATANOS</strong> y su empresa
+                        relacionada <strong>MIMINAL</strong>, dedicadas a la comercialización de ropa, que buscan
+                        unificar la operación comercial, el inventario por variantes (talla y color), la venta en
+                        tienda, el canal online y la administración contable y de nómina de ambas razones sociales
+                        mediante la implementación de Odoo Enterprise sobre la plataforma cloud Odoo.sh.
+                    </p>
+                </div>
+                <div class="contraportada-destacado">
+                    <h3>¿Por qué Odoo para ATANOS?</h3>
+                    <ul>
+                        <li>Gestión nativa de <strong>variantes de producto</strong> (talla, color, modelo), el corazón del negocio de ropa</li>
+                        <li>Las <strong>dos empresas</strong> (Atanos y Miminal) en una sola base de datos, con contabilidad separada y consolidación automática</li>
+                        <li>Tienda física, tienda online e inventario sincronizados en tiempo real: <strong>un solo stock, varios canales</strong></li>
+                        <li>Localización específica para Venezuela (SENIAT, LOTTT) y manejo nativo de dualidad VES / USD</li>
+                        <li>Visibilidad real de márgenes por prenda, por temporada, por talla y por canal de venta</li>
+                        <li>Cloud administrado por Odoo S.A.: seguro, respaldado y siempre actualizado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÍNDICE -->
+    <section class="indice">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Índice</h2>
+            <div class="indice-grid">
+                <div class="indice-columna">
+                    <ul class="indice-lista">
+                        <li><a href="#resumen-ejecutivo">1. Resumen Ejecutivo</a></li>
+                        <li><a href="#acerca-atanos">2. Acerca de ATANOS y MIMINAL</a></li>
+                        <li><a href="#sobre-empresas">3. Sobre Altix y Corporación Maximus 1999 C.A.</a></li>
+                        <li><a href="#objetivo">4. Objetivo del Proyecto</a></li>
+                        <li><a href="#alcance">5. Alcance Funcional</a></li>
+                        <li><a href="#arquitectura">6. Arquitectura Técnica – Odoo.sh</a></li>
+                        <li><a href="#precios-odoo">7. Modelo de Precios y Licenciamiento Odoo</a></li>
+                    </ul>
+                </div>
+                <div class="indice-columna">
+                    <ul class="indice-lista">
+                        <li><a href="#localizacion">8. Localización Venezuela (Contable y Nómina)</a></li>
+                        <li><a href="#implementacion">9. Servicios de Implementación</a></li>
+                        <li><a href="#inversion-año1">10. Resumen de Inversión Año 1</a></li>
+                        <li><a href="#recurrentes">11. Costos Recurrentes desde Año 2</a></li>
+                        <li><a href="#terminos">12. Términos y Condiciones</a></li>
+                        <li><a href="#cierre">13. Cierre y Próximos Pasos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- 1. RESUMEN EJECUTIVO -->
+        <section id="resumen-ejecutivo" class="seccion-contenido">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">01</span>
+                    <h2 class="titulo-seccion">Resumen Ejecutivo</h2>
+                </div>
+
+                <div class="contenido-texto">
+                    <p>
+                        <strong>ATANOS</strong> es una empresa venezolana dedicada a la comercialización de ropa,
+                        con la venta de prendas como línea principal de negocio, y opera además una segunda
+                        empresa relacionada, <strong>MIMINAL</strong>. Este esquema de dos razones sociales bajo
+                        una misma dirección exige un sistema capaz de administrar información contable separada
+                        por compañía, pero con inventario, catálogo y reportes gerenciales consolidados.
+                    </p>
+
+                    <p>
+                        La presente propuesta contempla la <strong>implementación de Odoo Enterprise</strong>
+                        en la plataforma cloud <strong>Odoo.sh</strong>, en configuración <strong>multi-compañía</strong>,
+                        abarcando ventas y CRM, compras, inventario con variantes de producto, Punto de Venta,
+                        tienda online, contabilidad y nómina. La solución incluye las localizaciones contable y de
+                        nómina específicas para Venezuela, desarrolladas por Corporación Maximus 1999 C.A.,
+                        garantizando cumplimiento normativo local.
+                    </p>
+
+                    <div class="caja-resaltado">
+                        <h3>Componentes de la Propuesta:</h3>
+                        <ul>
+                            <li><strong>Licencias Odoo Enterprise:</strong> 12 usuarios (11 usuarios operativos + 1 administrador del sistema), todas las aplicaciones</li>
+                            <li><strong>Infraestructura Odoo.sh:</strong> hosting cloud administrado, entorno de pruebas incluido</li>
+                            <li><strong>Configuración Multi-Compañía:</strong> ATANOS y MIMINAL en una única base de datos, con contabilidad independiente y consolidación</li>
+                            <li><strong>Inventario con Variantes:</strong> gestión por talla, color y modelo, con matriz de variantes y códigos de barras</li>
+                            <li><strong>Punto de Venta (POS):</strong> hasta 3 cajas, con integración a impresora fiscal</li>
+                            <li><strong>Tienda Online (e-Commerce):</strong> catálogo web sincronizado con inventario y precios</li>
+                            <li><strong>Localización Contable Venezuela:</strong> plan de cuentas, IVA, retenciones, reportes SENIAT</li>
+                            <li><strong>Localización de Nómina Venezuela:</strong> estructuras salariales, prestaciones, utilidades — dimensionada para <strong>12 empleados</strong></li>
+                            <li><strong>Arranque por saldos iniciales</strong> (sin migración de histórico)</li>
+                            <li><strong>Servicios de Implementación:</strong> proyecto llave en mano con metodología por fases</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ACERCA DE ATANOS Y MIMINAL -->
+        <section id="acerca-atanos" class="seccion-contenido fondo-claro">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">02</span>
+                    <h2 class="titulo-seccion">Acerca de ATANOS y MIMINAL</h2>
+                </div>
+
+                <div class="contenido-texto">
+                    <p>
+                        <strong>ATANOS</strong> concentra su actividad en la <strong>comercialización de ropa</strong>,
+                        atendiendo al cliente final a través de tienda física y proyectando su crecimiento hacia el
+                        canal digital. <strong>MIMINAL</strong> opera como segunda empresa del grupo, compartiendo
+                        dirección y estructura administrativa, lo que hace de la gestión multi-compañía un requisito
+                        central de esta implementación.
+                    </p>
+
+                    <div class="grid-productos">
+                        <div class="producto-categoria">
+                            <h3>Estructura Organizacional</h3>
+                            <ul>
+                                <li><strong>Empresas:</strong> ATANOS (principal) y MIMINAL (relacionada)</li>
+                                <li><strong>Actividad principal:</strong> comercialización de ropa y accesorios</li>
+                                <li><strong>Usuarios del sistema:</strong> 12 en total</li>
+                                <li><strong>Distribución:</strong> 11 usuarios operativos (ventas, caja, compras, inventario, administración) + 1 administrador del sistema</li>
+                                <li><strong>Nómina:</strong> 12 empleados</li>
+                                <li><strong>Canales de venta:</strong> tienda física (hasta 3 cajas) y tienda online</li>
+                            </ul>
+                        </div>
+                        <div class="producto-categoria">
+                            <h3>Retos Operativos a Resolver</h3>
+                            <ul>
+                                <li>Control de inventario por <strong>talla y color</strong>, no solo por modelo</li>
+                                <li>Un único stock alimentando tienda física y tienda online sin sobreventa</li>
+                                <li>Costeo real de la prenda, incluyendo gastos de importación y traslado</li>
+                                <li>Contabilidad separada de ATANOS y MIMINAL con visión consolidada</li>
+                                <li>Cumplimiento fiscal ante el SENIAT y laboral conforme a la LOTTT</li>
+                                <li>Operación en <strong>VES y USD</strong> de forma simultánea y trazable</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="nota-tabla">
+                        <strong>Nota:</strong> Los datos fiscales formales de ambas compañías (razón social completa,
+                        RIF, domicilio fiscal y condición ante el SENIAT) se incorporarán a esta sección una vez
+                        suministrados por el cliente, previo a la firma del contrato.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SOBRE ALTIX Y MAXIMUS -->
+        <section id="sobre-empresas" class="seccion-contenido">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">03</span>
+                    <h2 class="titulo-seccion">Sobre Altix Corp y Corporación Maximus 1999 C.A.</h2>
+                </div>
+
+                <div class="empresas-grid">
+                    <div class="empresa-bloque">
+                        <h3>Altix Corp</h3>
+                        <p>
+                            <strong>Altix Corp</strong> — <em>Advanced Logic &amp; Technology Integration
+                            Experience</em> — es una firma consultora especializada en la implementación
+                            de soluciones Odoo (versiones 16, 17, 18 y 19, Enterprise y Community). Con
+                            equipo certificado en consultoría funcional y desarrollo de módulos personalizados,
+                            Altix lidera proyectos de transformación digital basados en Odoo, garantizando
+                            adopción exitosa, capacitación efectiva y transferencia de conocimiento.
+                        </p>
+                        <p>
+                            <strong>Rol en este proyecto:</strong> Altix actúa como líder de la implementación,
+                            coordinando todas las fases del proyecto, desde el análisis de procesos hasta la
+                            capacitación y puesta en marcha del sistema.
+                        </p>
+                    </div>
+
+                    <div class="empresa-bloque">
+                        <h3>Corporación Maximus 1999 C.A.</h3>
+                        <p>
+                            <strong>Corporación Maximus 1999 C.A.</strong> es una empresa venezolana del sector
+                            de consumo masivo que opera Odoo internamente desde hace varios años. A partir de
+                            su experiencia real, Maximus ha desarrollado módulos de localización contable y de
+                            nómina específicos para Venezuela, así como automatizaciones avanzadas en procesos
+                            comerciales, logísticos y de gestión de precios.
+                        </p>
+                        <p>
+                            <strong>Rol en este proyecto:</strong> Corporación Maximus actúa como empresa
+                            intermediaria tecnológica, aportando su experiencia práctica en Odoo, los módulos
+                            de localización venezolana y soporte técnico especializado. Su participación
+                            garantiza que la solución cumpla con las normativas fiscales y laborales vigentes.
+                        </p>
+                        <div class="caja-experiencia">
+                            <h4>Experiencia relevante:</h4>
+                            <ul>
+                                <li>Automatización de procesos comerciales y logísticos en ambientes de alta transaccionalidad</li>
+                                <li>Desarrollo de localización contable para SENIAT (retenciones, libros fiscales, reportes)</li>
+                                <li>Desarrollo de localización de nómina (prestaciones, utilidades, vacaciones, LOTTT)</li>
+                                <li>Manejo nativo de dualidad de moneda (VES / USD)</li>
+                                <li>Operación real de estructuras multi-compañía dentro de una misma base de datos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. OBJETIVO DEL PROYECTO -->
+        <section id="objetivo" class="seccion-contenido fondo-claro">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">04</span>
+                    <h2 class="titulo-seccion">Objetivo del Proyecto</h2>
+                </div>
+
+                <div class="contenido-texto">
+                    <p>
+                        El objetivo principal del proyecto es <strong>integrar la operación comercial, de
+                        inventario, de venta en tienda, de venta online y la administración de ATANOS y MIMINAL
+                        en una plataforma única, multi-compañía y escalable</strong>, que permita controlar el
+                        inventario a nivel de variante, medir la rentabilidad real por prenda y canal, y
+                        garantizar el cumplimiento normativo venezolano.
+                    </p>
+
+                    <div class="objetivos-lista">
+                        <div class="objetivo-item">
+                            <h4>Integración de Procesos</h4>
+                            <p>Consolidar ventas, compras, inventario, POS, tienda online, contabilidad y nómina de ambas empresas en un solo sistema, eliminando doble carga y planillas paralelas.</p>
+                        </div>
+                        <div class="objetivo-item">
+                            <h4>Control por Variante</h4>
+                            <p>Saber en todo momento qué hay disponible por modelo, talla y color, en cada ubicación y en cada canal, evitando quiebres de stock y sobreventa online.</p>
+                        </div>
+                        <div class="objetivo-item">
+                            <h4>Visibilidad y Rentabilidad</h4>
+                            <p>Márgenes reales por prenda, temporada, categoría y canal (tienda vs. online), con costos que incluyen importación y traslado.</p>
+                        </div>
+                        <div class="objetivo-item">
+                            <h4>Cumplimiento Normativo</h4>
+                            <p>Garantizar cumplimiento ante el SENIAT (IVA, retenciones, libros fiscales) y normativa laboral venezolana (LOTTT, prestaciones), por cada compañía.</p>
+                        </div>
+                        <div class="objetivo-item">
+                            <h4>Escalabilidad</h4>
+                            <p>Solución preparada para crecer: nuevas tiendas, nuevas cajas, más usuarios y nuevas líneas de negocio sin rehacer el sistema.</p>
+                        </div>
+                        <div class="objetivo-item">
+                            <h4>Automatización</h4>
+                            <p>Reducción de tareas manuales mediante asientos automáticos, reposición sugerida, sincronización de catálogo y reportes programados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ALCANCE FUNCIONAL -->
+        <section id="alcance" class="seccion-contenido">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">05</span>
+                    <h2 class="titulo-seccion">Alcance Funcional</h2>
+                </div>
+
+                <div class="alcance-grid">
+
+                    <div class="modulo-alcance">
+                        <h3>Gestión Multi-Compañía</h3>
+                        <ul>
+                            <li>ATANOS y MIMINAL en una única base de datos</li>
+                            <li>Contabilidad y libros fiscales independientes por compañía</li>
+                            <li>Reglas de acceso y visibilidad por empresa y por usuario</li>
+                            <li>Reportes consolidados para la dirección del grupo</li>
+                            <li>Operaciones entre compañías con trazabilidad</li>
+                        </ul>
+                    </div>
+
+                    <div class="modulo-alcance">
+                        <h3>Ventas y CRM</h3>
+                        <ul>
+                            <li>Cotizaciones y órdenes de venta</li>
+                            <li>Gestión de clientes, contactos y listas de precios</li>
+                            <li>Pipeline comercial para venta mayorista o corporativa</li>
+                            <li>Descuentos, promociones y precios por temporada</li>
+                        </ul>
+                    </div>
+
+                    <div class="modulo-alcance">
+                        <h3>Compras y Costos de Importación</h3>
+                        <ul>
+                            <li>Solicitudes de cotización y órdenes de compra</li>
+                            <li>Gestión de proveedores y condiciones comerciales</li>
+                            <li>Costos en destino (fletes, aranceles, gastos asociados) prorrateados al costo de la prenda</li>
+                            <li>Recepciones parciales y control de pendientes</li>
+                        </ul>
+                    </div>
+
+                    <div class="modulo-alcance">
+                        <h3>Inventario y Variantes de Producto</h3>
+                        <ul>
+                            <li>Matriz de variantes: <strong>modelo × talla × color</strong></li>
+                            <li>Códigos de barras por variante y etiquetado</li>
+                            <li>Gestión multi-ubicación, transferencias y ajustes</li>
+                            <li>Inventarios físicos y conteos cíclicos</li>
+                            <li>Valorización de inventario (FIFO, promedio)</li>
+                        </ul>
+                    </div>
+
+                    <div class="modulo-alcance">
+                        <h3>Punto de Venta (POS)</h3>
+                        <ul>
+                            <li>Operación de <strong>hasta 3 cajas</strong></li>
+                            <li>Integración con <strong>impresora fiscal</strong></li>
+                            <li>Búsqueda rápida por código de barras y por variante</li>
+                            <li>Múltiples métodos de pago (efectivo VES/USD, tarjeta, transferencia, pago móvil)</li>
+                            <li>Sesiones por turno y por usuario, cierre de caja y arqueo diario</li>
+                            <li>Descarga automática de inventario y asiento contable</li>
+                        </ul>
+                    </div>
+
+                    <div class="modulo-alcance">
+                        <h3>Tienda Online (e-Commerce)</h3>
+                        <ul>
+                            <li>Catálogo web con variantes de talla y color</li>
+                            <li>Stock compartido en tiempo real con la tienda física</li>
+                            <li>Fichas de producto con imágenes y atributos</li>
+                            <li>Carrito, pedido y confirmación integrados a ventas e inventario</li>
+                            <li>Listas de precios específicas del canal online</li>
+                        </ul>
+                    </div>
+
+                    <div class="modulo-alcance">
+                        <h3>Contabilidad Base</h3>
+                        <ul>
+                            <li>Asientos contables automáticos (ventas, compras, inventario, POS, nómina)</li>
+                            <li>Conciliación bancaria, pagos y cobros</li>
+                            <li>Reportes financieros: Balance, Estado de Resultados, Flujo de Caja</li>
+                            <li>Centros de costo y contabilidad analítica por tienda y canal</li>
+                        </ul>
+                    </div>
+
+                    <div class="modulo-alcance">
+                        <h3>Localización Contable Venezuela</h3>
+                        <ul>
+                            <li>Plan de cuentas adaptado a normativa venezolana</li>
+                            <li>IVA (16%), retenciones de IVA e ISLR según tabulador</li>
+                            <li>Libro de Ventas y Libro de Compras por compañía</li>
+                            <li>Reportes y declaraciones SENIAT</li>
+                        </ul>
+                    </div>
+
+                    <div class="modulo-alcance">
+                        <h3>Localización de Nómina Venezuela</h3>
+                        <ul>
+                            <li>Estructuras salariales conforme a LOTTT</li>
+                            <li>Prestaciones sociales, utilidades, vacaciones, bono vacacional</li>
+                            <li>Deducciones (SSO, paro forzoso, FAOV, ISLR, préstamos)</li>
+                            <li>Recibos, resúmenes y TXT bancarios — <strong>12 empleados</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="modulo-alcance">
+                        <h3>Dualidad de Moneda (VES / USD)</h3>
+                        <ul>
+                            <li>Transacciones en bolívares (VES) y dólares (USD)</li>
+                            <li>Actualización de tasas de cambio y conversión automática</li>
+                            <li>Cobro en múltiples monedas dentro del POS</li>
+                            <li>Reportes financieros en ambas monedas y diferencias cambiarias</li>
+                        </ul>
+                    </div>
+
+                    <div class="modulo-alcance">
+                        <h3>Facturación Fiscal / SENIAT</h3>
+                        <ul>
+                            <li>Emisión de facturas fiscales con numeración controlada</li>
+                            <li>Cálculo automático de impuestos y retenciones</li>
+                            <li>Notas de crédito y débito por devoluciones y cambios de prenda</li>
+                            <li>Integración con libros de compras y ventas</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. ARQUITECTURA TÉCNICA -->
+        <section id="arquitectura" class="seccion-contenido fondo-claro">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">06</span>
+                    <h2 class="titulo-seccion">Arquitectura Técnica – Odoo.sh</h2>
+                </div>
+
+                <div class="contenido-texto">
+                    <p>
+                        La solución se implementará sobre <strong>Odoo.sh</strong>, la plataforma cloud oficial
+                        de Odoo S.A. Esta arquitectura garantiza disponibilidad, seguridad, respaldos automáticos
+                        y escalabilidad sin inversión en infraestructura local — un punto especialmente relevante
+                        para una operación de retail que depende de que la caja y la tienda online estén siempre
+                        disponibles.
+                    </p>
+
+                    <div class="especificaciones-tecnicas">
+                        <h3>Especificaciones Técnicas</h3>
+                        <div class="grid-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Versión:</span>
+                                <span class="spec-valor">Odoo Enterprise versión 19.0</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Usuarios:</span>
+                                <span class="spec-valor">12 usuarios concurrentes</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Compañías:</span>
+                                <span class="spec-valor">2 (ATANOS y MIMINAL) en una misma BD</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Workers:</span>
+                                <span class="spec-valor">2 workers (dimensionamiento inicial)</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Almacenamiento:</span>
+                                <span class="spec-valor">50 GB</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Entornos:</span>
+                                <span class="spec-valor">Producción + Staging (pruebas)</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Hosting:</span>
+                                <span class="spec-valor">Cloud administrado por Odoo S.A.</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Canales:</span>
+                                <span class="spec-valor">POS (hasta 3 cajas) + tienda online</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="beneficios-odoo-sh">
+                        <h3>Beneficios de Odoo.sh</h3>
+                        <div class="beneficios-grid">
+                            <div class="beneficio">
+                                <h4>Hosting Administrado</h4>
+                                <p>Odoo S.A. gestiona servidores, actualizaciones de seguridad y disponibilidad, liberando a ATANOS de tareas de infraestructura.</p>
+                            </div>
+                            <div class="beneficio">
+                                <h4>Respaldos Automáticos</h4>
+                                <p>Backups diarios automáticos con retención de 30 días.</p>
+                            </div>
+                            <div class="beneficio">
+                                <h4>Entorno de Pruebas</h4>
+                                <p>Staging independiente para probar configuraciones, promociones y actualizaciones sin afectar la operación de la tienda.</p>
+                            </div>
+                            <div class="beneficio">
+                                <h4>Escalabilidad</h4>
+                                <p>Posibilidad de aumentar usuarios, cajas, workers y almacenamiento sin interrupciones.</p>
+                            </div>
+                            <div class="beneficio">
+                                <h4>Seguridad</h4>
+                                <p>SSL, encriptación, firewalls y monitoreo 24/7 gestionados por Odoo S.A.</p>
+                            </div>
+                            <div class="beneficio">
+                                <h4>Actualizaciones</h4>
+                                <p>Acceso a mejoras de Odoo Enterprise sin costos adicionales durante la vigencia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. MODELO DE PRECIOS ODOO -->
+        <section id="precios-odoo" class="seccion-contenido">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">07</span>
+                    <h2 class="titulo-seccion">Modelo de Precios y Licenciamiento Odoo</h2>
+                </div>
+
+                <div class="contenido-texto">
+                    <p>
+                        La inversión para este proyecto se estructura en <strong>cuatro bloques principales</strong>:
+                    </p>
+                    <ol class="lista-bloques">
+                        <li><strong>Odoo (Licencias + Odoo.sh):</strong> suscripción anual a licencias de usuario y plataforma cloud, cotizada con la calculadora oficial de Odoo S.A.</li>
+                        <li><strong>Localización Contable Venezuela:</strong> módulo de localización SENIAT, licencia por base de datos (cubre ambas compañías).</li>
+                        <li><strong>Localización de Nómina Venezuela:</strong> módulo de nómina LOTTT, dimensionado para 12 empleados.</li>
+                        <li><strong>Servicios de Implementación:</strong> proyecto llave en mano que incluye análisis, configuración, parametrización, pruebas y capacitación.</li>
+                    </ol>
+
+                    <div class="tabla-wrapper">
+                        <table class="tabla-precios">
+                            <thead>
+                                <tr>
+                                    <th>Bloque</th>
+                                    <th>Detalle</th>
+                                    <th>Monto (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Odoo – Licencias + Odoo.sh (Año 1)</td>
+                                    <td>12 usuarios, todas las apps, con descuento promocional Año 1</td>
+                                    <td class="monto">3.244,80</td>
+                                </tr>
+                                <tr>
+                                    <td>Localización Contable Venezuela</td>
+                                    <td>Licencia por BD + parametrización inicial (ATANOS y MIMINAL)</td>
+                                    <td class="monto">7.500,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Localización Nómina Venezuela</td>
+                                    <td>Licencia por BD + parametrización (12 empleados)</td>
+                                    <td class="monto">3.500,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Implementación</td>
+                                    <td>Proyecto llave en mano por fases: multi-compañía, variantes, POS y e-Commerce</td>
+                                    <td class="monto">15.755,20</td>
+                                </tr>
+                                <tr class="fila-total">
+                                    <td colspan="2"><strong>Total Inversión Año 1</strong></td>
+                                    <td class="monto"><strong>30.000,00</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="nota-tabla">
+                        <strong>Detalle de licencias Odoo Año 1:</strong> 12 usuarios — Apps USD 163,20/mes,
+                        descuento primer año USD -32,40/mes, alojamiento Odoo.sh USD 139,60/mes → USD 270,40/mes
+                        facturado anualmente como <strong>USD 3.244,80</strong>. A partir del Año 2 el monto
+                        recurrente de Odoo es de <strong>USD 3.633,60/año</strong> (sin descuento promocional).
+                        Todos los montos están expresados en dólares estadounidenses (USD).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. LOCALIZACIÓN VENEZUELA -->
+        <section id="localizacion" class="seccion-contenido fondo-claro">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">08</span>
+                    <h2 class="titulo-seccion">Localización Venezuela (Contable y Nómina)</h2>
+                </div>
+
+                <div class="localizacion-grid">
+
+                    <div class="localizacion-bloque">
+                        <div class="localizacion-header">
+                            <h3>Localización Contable Venezuela</h3>
+                            <span class="precio-localizacion">USD 7.500,00</span>
+                        </div>
+                        <p>
+                            Módulo desarrollado por Corporación Maximus 1999 C.A. que adapta la contabilidad
+                            de Odoo a las normativas fiscales venezolanas, garantizando cumplimiento con el
+                            SENIAT y facilitando la gestión de impuestos, retenciones y libros fiscales. Al ser
+                            una <strong>licencia por base de datos</strong>, cubre tanto a <strong>ATANOS</strong>
+                            como a <strong>MIMINAL</strong> sin costo adicional de licenciamiento.
+                        </p>
+                        <h4>Incluye:</h4>
+                        <ul>
+                            <li><strong>Plan de Cuentas Venezolano:</strong> estructura contable adaptada a la normativa local, replicada por compañía.</li>
+                            <li><strong>Impuestos y Retenciones:</strong> IVA (16%), retenciones de IVA y retenciones de ISLR según tabulador.</li>
+                            <li><strong>Libro de Ventas y Compras:</strong> generación automática e independiente para cada compañía.</li>
+                            <li><strong>Reportes SENIAT:</strong> formatos requeridos para declaraciones de IVA, retenciones y otros tributos.</li>
+                            <li><strong>Parametrización Inicial:</strong> configuración del plan de cuentas, impuestos, retenciones y políticas contables de ambas empresas.</li>
+                            <li><strong>Documentación y Capacitación:</strong> sesiones al personal contable en el uso del módulo.</li>
+                        </ul>
+                    </div>
+
+                    <div class="localizacion-bloque">
+                        <div class="localizacion-header">
+                            <h3>Localización de Nómina Venezuela</h3>
+                            <span class="precio-localizacion">USD 3.500,00</span>
+                        </div>
+                        <p>
+                            Módulo de nómina que cumple con la Ley Orgánica del Trabajo, los Trabajadores y
+                            las Trabajadoras (LOTTT) y normativas laborales venezolanas. Dimensionado para
+                            la nómina actual del grupo: <strong>12 empleados</strong>.
+                        </p>
+                        <h4>Incluye:</h4>
+                        <ul>
+                            <li><strong>Estructuras Salariales:</strong> configuración de salarios, bonos, horas extras y comisiones de venta según LOTTT.</li>
+                            <li><strong>Prestaciones Sociales:</strong> cálculo automático de prestaciones, anticipos y liquidaciones.</li>
+                            <li><strong>Utilidades:</strong> cálculo conforme a legislación venezolana (mínimo 15 días, máximo 4 meses).</li>
+                            <li><strong>Vacaciones y Bono Vacacional:</strong> gestión de días, bono y fraccionamiento.</li>
+                            <li><strong>Deducciones y Retenciones:</strong> SSO, paro forzoso, FAOV, retenciones de ISLR, préstamos y anticipos.</li>
+                            <li><strong>Reportes de Nómina:</strong> recibos, resúmenes, archivos TXT para bancos y reportes para entes gubernamentales.</li>
+                            <li><strong>Capacitación:</strong> sesiones de entrenamiento al personal de administración y nómina.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="nota-localizacion">
+                    <p>
+                        <strong>Importante:</strong> Ambas localizaciones son licencias por base de datos (BD),
+                        con derecho a actualizaciones menores y soporte técnico incluido durante el primer año.
+                        Dado que ATANOS y MIMINAL operarán sobre una <strong>única base de datos en esquema
+                        multi-compañía</strong>, no se duplica el costo de licenciamiento de las localizaciones:
+                        este es uno de los ahorros directos del esquema propuesto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. SERVICIOS DE IMPLEMENTACIÓN -->
+        <section id="implementacion" class="seccion-contenido">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">09</span>
+                    <h2 class="titulo-seccion">Servicios de Implementación</h2>
+                </div>
+
+                <div class="contenido-texto">
+                    <p>
+                        Los servicios de implementación se ofrecen como un <strong>paquete llave en mano</strong>
+                        bajo metodología estructurada por fases. Incluye análisis de procesos, parametrización,
+                        configuración, pruebas, capacitación y acompañamiento al go-live.
+                    </p>
+
+                    <div class="caja-implementacion">
+                        <h3>Inversión en Implementación</h3>
+                        <p class="monto-implementacion">USD 15.755,20</p>
+                        <p class="descripcion-implementacion">Proyecto completo: desde análisis hasta salida en vivo (≈ 525 horas efectivas)</p>
+                    </div>
+
+                    <h3 class="subtitulo-fases">Metodología por Fases</h3>
+                    <p>
+                        La implementación se ejecutará siguiendo una metodología estructurada en fases,
+                        garantizando una transición ordenada, minimizando riesgos y asegurando la adopción
+                        exitosa del sistema por parte de los usuarios de ATANOS y MIMINAL.
+                    </p>
+
+                    <div class="fases-grid">
+
+                        <div class="fase">
+                            <div class="fase-numero">Fase 0</div>
+                            <h4>Análisis y Diseño de Procesos</h4>
+                            <ul>
+                                <li>Levantamiento de procesos actuales de ambas empresas (as-is)</li>
+                                <li>Diseño de procesos optimizados en Odoo (to-be)</li>
+                                <li>Definición de la estructura de variantes (modelo, talla, color)</li>
+                                <li>Definición de flujos, roles y permisos por compañía</li>
+                                <li>Documento de alcance y cronograma detallado</li>
+                            </ul>
+                        </div>
+
+                        <div class="fase">
+                            <div class="fase-numero">Fase 1</div>
+                            <h4>Base Administrativa, Contable y Multi-Compañía</h4>
+                            <ul>
+                                <li>Configuración de ATANOS y MIMINAL como compañías independientes</li>
+                                <li>Usuarios, permisos y reglas de acceso por empresa (11 operativos + 1 administrador)</li>
+                                <li>Plan de cuentas y políticas contables por compañía</li>
+                                <li>Impuestos, retenciones y libros fiscales</li>
+                                <li>Carga inicial de maestros: clientes, proveedores, terceros</li>
+                            </ul>
+                        </div>
+
+                        <div class="fase">
+                            <div class="fase-numero">Fase 2</div>
+                            <h4>Catálogo, Variantes e Inventario</h4>
+                            <ul>
+                                <li>Definición de atributos y matriz de variantes (talla / color)</li>
+                                <li>Carga del catálogo de productos y códigos de barras</li>
+                                <li>Configuración de almacenes, ubicaciones y reglas de reposición</li>
+                                <li>Política de valorización de inventario y costos de importación</li>
+                                <li>Carga de saldos iniciales de inventario</li>
+                            </ul>
+                        </div>
+
+                        <div class="fase">
+                            <div class="fase-numero">Fase 3</div>
+                            <h4>Ciclo Comercial: Ventas y Compras</h4>
+                            <ul>
+                                <li>Flujo de cotización, orden de venta, entrega y factura</li>
+                                <li>Listas de precios, descuentos y promociones por temporada</li>
+                                <li>Flujo de compra, recepción y costeo en destino</li>
+                                <li>Devoluciones, cambios de prenda y notas de crédito</li>
+                            </ul>
+                        </div>
+
+                        <div class="fase">
+                            <div class="fase-numero">Fase 4</div>
+                            <h4>Punto de Venta (POS)</h4>
+                            <ul>
+                                <li>Configuración de hasta 3 cajas y sesiones por turno</li>
+                                <li>Catálogo POS, búsqueda por código de barras y por variante</li>
+                                <li>Métodos de pago (efectivo VES/USD, tarjeta, transferencia, pago móvil)</li>
+                                <li>Integración con impresora fiscal</li>
+                                <li>Arqueo, cierre de caja e integración con inventario y contabilidad</li>
+                            </ul>
+                        </div>
+
+                        <div class="fase">
+                            <div class="fase-numero">Fase 5</div>
+                            <h4>Tienda Online (e-Commerce)</h4>
+                            <ul>
+                                <li>Configuración del sitio y del catálogo online con variantes</li>
+                                <li>Sincronización de stock y precios con la operación física</li>
+                                <li>Flujo de pedido online hacia ventas, inventario y facturación</li>
+                                <li>Pruebas de sobreventa y disponibilidad en tiempo real</li>
+                            </ul>
+                        </div>
+
+                        <div class="fase">
+                            <div class="fase-numero">Fase 6</div>
+                            <h4>Nómina Venezuela</h4>
+                            <ul>
+                                <li>Estructuras salariales y conceptos de nómina</li>
+                                <li>Reglas de prestaciones, utilidades y vacaciones</li>
+                                <li>Carga de empleados (12)</li>
+                                <li>Pruebas de cálculo con escenarios reales y paralelo de nómina</li>
+                            </ul>
+                        </div>
+
+                        <div class="fase">
+                            <div class="fase-numero">Fase 7</div>
+                            <h4>Dualidad de Moneda, Fiscal e Integración</h4>
+                            <ul>
+                                <li>Configuración de monedas (VES / USD) y tasas de cambio</li>
+                                <li>Parametrización de facturación fiscal y numeración controlada</li>
+                                <li>Integración completa de todos los módulos y ambas compañías</li>
+                                <li>Pruebas integrales end-to-end</li>
+                            </ul>
+                        </div>
+
+                        <div class="fase">
+                            <div class="fase-numero">Fase 8</div>
+                            <h4>Capacitación y Salida en Vivo</h4>
+                            <ul>
+                                <li>Sesiones de capacitación por módulo y por rol (caja, inventario, administración)</li>
+                                <li>Manuales de usuario y documentación</li>
+                                <li>Paralelo operativo (sistema actual vs. Odoo)</li>
+                                <li>Salida en vivo (go-live) y soporte post-implementación inicial</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="nota-fases">
+                        <p>
+                            <strong>Nota:</strong> El cronograma estimado para completar todas las fases es de
+                            <strong>16 a 20 semanas</strong>, dependiendo de la disponibilidad del equipo de
+                            ATANOS, del estado del catálogo de productos a cargar y de la complejidad de los
+                            procesos actuales. Se establecerán hitos de revisión al finalizar cada fase para
+                            validar avances y ajustar el plan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. RESUMEN INVERSIÓN AÑO 1 -->
+        <section id="inversion-año1" class="seccion-contenido fondo-vino">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">10</span>
+                    <h2 class="titulo-seccion">Resumen de Inversión Año 1</h2>
+                </div>
+
+                <div class="contenido-texto">
+                    <p class="intro-inversion">
+                        A continuación se presenta el resumen consolidado de la inversión total para el Año 1,
+                        que incluye licencias Odoo + Odoo.sh, las localizaciones de Venezuela (Contable y
+                        Nómina) y los servicios de implementación llave en mano para ambas compañías.
+                    </p>
+
+                    <div class="tabla-wrapper-destacada">
+                        <table class="tabla-inversion">
+                            <thead>
+                                <tr>
+                                    <th>Concepto</th>
+                                    <th>Monto (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Odoo (Licencias + Odoo.sh – Año 1)</td>
+                                    <td class="monto">3.244,80</td>
+                                </tr>
+                                <tr>
+                                    <td>Localización Contable Venezuela</td>
+                                    <td class="monto">7.500,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Localización Nómina Venezuela</td>
+                                    <td class="monto">3.500,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Servicios de Implementación</td>
+                                    <td class="monto">15.755,20</td>
+                                </tr>
+                                <tr class="fila-total-principal">
+                                    <td><strong>Total Inversión Año 1</strong></td>
+                                    <td class="monto"><strong>30.000,00</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="caja-total-redondeado">
+                        <p class="label-redondeado">Total Inversión Año 1:</p>
+                        <p class="valor-redondeado">USD 30.000,00</p>
+                    </div>
+
+                    <div class="notas-inversion">
+                        <h4>Notas Importantes:</h4>
+                        <ul>
+                            <li>El descuento promocional del primer año en las licencias Odoo lo aplica Odoo S.A.; a partir del Año 2 el recurrente es de USD 3.633,60/año.</li>
+                            <li>Las localizaciones (Contable y Nómina) son pagos únicos por base de datos, con derecho a actualizaciones menores y soporte durante el primer año. Cubren a ATANOS y MIMINAL.</li>
+                            <li>Los servicios de implementación se ofrecen como paquete cerrado; cambios de alcance se evalúan y aprueban antes de aplicar.</li>
+                            <li>La propuesta contempla arranque por saldos iniciales, sin migración de histórico transaccional.</li>
+                            <li>Todos los montos en dólares estadounidenses (USD).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. COSTOS RECURRENTES -->
+        <section id="recurrentes" class="seccion-contenido">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">11</span>
+                    <h2 class="titulo-seccion">Costos Recurrentes desde Año 2</h2>
+                </div>
+
+                <div class="contenido-texto">
+                    <p>
+                        A partir del segundo año, el único costo recurrente obligatorio es la suscripción a Odoo
+                        (licencias de usuario + plataforma Odoo.sh). Las localizaciones y la implementación son
+                        pagos únicos del Año 1.
+                    </p>
+
+                    <div class="recurrentes-grid">
+                        <div class="recurrente-bloque">
+                            <h3>Año 1</h3>
+                            <p class="descripcion-recurrente">Inversión inicial completa</p>
+                            <p class="monto-recurrente">USD 30.000,00</p>
+                            <p class="detalle-recurrente">Licencias + Localizaciones + Implementación</p>
+                        </div>
+                        <div class="recurrente-bloque">
+                            <h3>Año 2 en adelante</h3>
+                            <p class="descripcion-recurrente">Sólo recurrente Odoo</p>
+                            <p class="monto-recurrente">USD 3.633,60</p>
+                            <p class="detalle-recurrente">Licencias 12 usuarios + Odoo.sh, sin descuento</p>
+                        </div>
+                    </div>
+
+                    <div class="aclaraciones-recurrentes">
+                        <h4>Aclaraciones:</h4>
+                        <ul>
+                            <li>Desglose del recurrente anual: licencias 12 usuarios <strong>USD 1.958,40</strong> + alojamiento Odoo.sh <strong>USD 1.675,20</strong>.</li>
+                            <li>El monto varía si ATANOS incorpora usuarios adicionales, más cajas POS, workers o almacenamiento.</li>
+                            <li>Las tarifas de licenciamiento y hosting son fijadas por Odoo S.A. y pueden ser ajustadas por el fabricante.</li>
+                            <li>El servicio de mantenimiento y soporte posterior al primer año se cotiza por separado, según modalidad que se acuerde.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. TÉRMINOS Y CONDICIONES -->
+        <section id="terminos" class="seccion-contenido fondo-claro">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">12</span>
+                    <h2 class="titulo-seccion">Términos y Condiciones</h2>
+                </div>
+
+                <div class="contenido-texto">
+
+                    <div class="termino-item">
+                        <h3>Moneda</h3>
+                        <p>Todos los montos expresados en esta propuesta están en <strong>dólares estadounidenses (USD)</strong>.</p>
+                    </div>
+
+                    <div class="termino-item">
+                        <h3>Forma de Pago Sugerida</h3>
+                        <p>Para alinear los pagos con los hitos del proyecto se sugiere el siguiente esquema:</p>
+                        <ul>
+                            <li><strong>40%</strong> a la firma del contrato (USD 12.000,00)</li>
+                            <li><strong>40%</strong> al finalizar la Fase 4 – Punto de Venta operativo en ambiente de pruebas (USD 12.000,00)</li>
+                            <li><strong>20%</strong> al cierre del go-live y aceptación formal del sistema (USD 6.000,00)</li>
+                        </ul>
+                        <p class="nota-termino">Este esquema puede ajustarse según las políticas financieras de ATANOS, previa coordinación.</p>
+                    </div>
+
+                    <div class="termino-item">
+                        <h3>Vigencia de la Propuesta</h3>
+                        <p>La presente propuesta tiene una vigencia de <strong>30 días calendario</strong> a partir de la fecha de emisión. Pasado este período, los montos y condiciones podrán ser revisados.</p>
+                    </div>
+
+                    <div class="termino-item">
+                        <h3>Exclusiones</h3>
+                        <p>La propuesta <strong>NO incluye</strong>:</p>
+                        <ul>
+                            <li>Hardware, servidores locales, equipos de cómputo o dispositivos móviles</li>
+                            <li>Impresoras fiscales, lectores de código de barras, gavetas de dinero o equipos POS especializados (hardware)</li>
+                            <li>Diseño gráfico, fotografía de producto o creación de contenido para la tienda online</li>
+                            <li>Dominio, certificados adicionales ni pasarelas de pago en línea (su contratación e integración se evalúa por separado)</li>
+                            <li>Migración de histórico transaccional desde sistemas anteriores (el arranque es por saldos iniciales)</li>
+                            <li>Integraciones con sistemas externos no mencionados explícitamente en el alcance</li>
+                            <li>Desarrollo de funcionalidades adicionales o módulos personalizados fuera del alcance definido</li>
+                            <li>Servicios de consultoría posteriores al go-live (disponibles bajo contrato de mantenimiento opcional)</li>
+                            <li>Costos de conectividad, internet o telecomunicaciones</li>
+                        </ul>
+                    </div>
+
+                    <div class="termino-item">
+                        <h3>Condiciones Generales</h3>
+                        <ul>
+                            <li>El cronograma dependerá de la disponibilidad del equipo de ATANOS para reuniones, validaciones y pruebas.</li>
+                            <li>ATANOS deberá proveer acceso a la información necesaria (procesos actuales, catálogo de productos, datos maestros, políticas internas) para la correcta parametrización del sistema.</li>
+                            <li>La calidad y el orden del catálogo de productos entregado por el cliente impacta directamente en los tiempos de la Fase 2.</li>
+                            <li>Cualquier cambio en el alcance durante la implementación será evaluado y podrá generar ajustes en tiempos y costos, sujeto a aprobación de ATANOS.</li>
+                            <li>Los servicios de capacitación serán impartidos en español, de forma presencial y/o remota según se acuerde.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. CIERRE Y PRÓXIMOS PASOS -->
+        <section id="cierre" class="seccion-contenido seccion-cierre">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">13</span>
+                    <h2 class="titulo-seccion">Cierre y Próximos Pasos</h2>
+                </div>
+
+                <div class="contenido-texto">
+                    <p class="parrafo-agradecimiento">
+                        Agradecemos la oportunidad de presentar esta propuesta a <strong>ATANOS</strong> y
+                        <strong>MIMINAL</strong>. Estamos convencidos de que la implementación de Odoo Enterprise,
+                        combinada con las localizaciones especializadas de Maximus y una metodología probada,
+                        permitirá controlar el inventario prenda por prenda, unificar la venta en tienda y online,
+                        y dar a la dirección una visión consolidada de ambas empresas.
+                    </p>
+
+                    <p>
+                        Tanto <strong>Altix Corp</strong> como <strong>Corporación Maximus 1999 C.A.</strong>
+                        están comprometidos con el éxito del proyecto, aportando experiencia, conocimiento del
+                        contexto venezolano y acompañamiento cercano en cada etapa.
+                    </p>
+
+                    <div class="proximos-pasos-bloque">
+                        <h3>Próximos Pasos Sugeridos</h3>
+                        <ol class="pasos-lista">
+                            <li>
+                                <strong>Reunión de Revisión de la Propuesta:</strong>
+                                Sesión con la dirección de ATANOS para aclarar dudas técnicas y comerciales
+                                y profundizar en aspectos puntuales del alcance.
+                            </li>
+                            <li>
+                                <strong>Entrega de Datos Fiscales:</strong>
+                                Suministro de razón social, RIF, domicilio fiscal y condición ante el SENIAT
+                                de ATANOS y MIMINAL, para completar la formalización del documento.
+                            </li>
+                            <li>
+                                <strong>Ajuste Final de Alcance y Cronograma:</strong>
+                                Confirmar cantidad definitiva de cajas POS, estado del catálogo de productos,
+                                definir el equipo de trabajo del cliente y establecer el cronograma definitivo.
+                            </li>
+                            <li>
+                                <strong>Formalización del Contrato:</strong>
+                                Preparar y firmar el acuerdo de servicios, estableciendo roles, responsabilidades
+                                y compromisos de ambas partes.
+                            </li>
+                            <li>
+                                <strong>Confirmación de Fecha de Inicio:</strong>
+                                Definir la fecha de inicio oficial del proyecto (Fase 0 – Análisis y Diseño de Procesos).
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="contacto-cierre">
+                        <h3>Contacto</h3>
+                        <p>
+                            Para cualquier consulta, aclaración o para coordinar los próximos pasos, no dude
+                            en contactarnos. Estamos a disposición para acompañar a ATANOS en este paso hacia
+                            la transformación digital.
+                        </p>
+                    </div>
+
+                    <div class="firma-cierre">
+                        <p><strong>Altix Corp</strong> &amp; <strong>Corporación Maximus 1999 C.A.</strong></p>
+                        <p>Equipo de Implementación Odoo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="footer-logos">
+                <img src="altix.png" alt="Logo Altix Corp" class="footer-logo">
+            </div>
+            <p class="footer-texto">
+                Propuesta de Implementación Odoo Enterprise — ATANOS &amp; MIMINAL | 2026
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
